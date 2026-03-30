@@ -1,8 +1,6 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\ProductController;
 
-Route::get('/', function () {
-    return "<h1 style='text-align:center;margin-top:100px;'>
-            Hello World from Laravel 🚀</h1>";
-});
+Route::get('/', [ProductController::class, 'index']);
